@@ -5,5 +5,4 @@ __pycache__/
 models/
 data/
 kb/
-bakeoff/*
-!bakeoff/judgements.json
+bakeoff/
