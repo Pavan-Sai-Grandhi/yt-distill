@@ -1,0 +1,19 @@
+[project]
+name = "yt-distill"
+version = "0.1.0"
+description = "Distill subtitle-less local-language YouTube videos into notes, locally and for free"
+requires-python = ">=3.12"
+dependencies = ["yt-dlp"]
+
+[project.scripts]
+yt-distill = "yt_distill.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,114 @@
+{
+ "judged": "2026-10-16, blind, by ear; wrong-word marks only on the chosen output",
+ "clips": {
+  "82SqXcKaadU_790": {
+   "lang": "te",
+   "closest": "vaani",
+   "wrong": {
+    "vaani": "1/156"
+   }
+  },
+  "PBdnyzsJ7dE_331": {
+   "lang": "te",
+   "closest": "vaani",
+   "wrong": {
+    "vaani": "4/193"
+   }
+  },
+  "kTaKgtRALZo_424": {
+   "lang": "te",
+   "closest": "vaani",
+   "wrong": {
+    "vaani": "5/169"
+   }
+  },
+  "v4jUcYwPL0g_692": {
+   "lang": "te",
+   "closest": "vaani",
+   "wrong": {
+    "vaani": "16/173"
+   },
+   "note": "speech is English; vaani writes it in Telugu script. User wants Tinglish (English words in Latin script)."
+  },
+  "HhP-NV-Ea9A_346": {
+   "lang": "hi",
+   "closest": "turbo",
+   "note": "chosen for readability (Hinglish, English in Latin script); user cannot verify Hindi accuracy"
+  }
+ },
+ "round2": {
+  "judged": "2026-10-17, blind, vaani vs indic (IndicConformer), Telugu only; user cannot judge Hindi",
+  "clips": {
+   "82SqXcKaadU_790": {
+    "closest": "indic",
+    "wrong": {
+     "vaani": "2/156",
+     "indic": "1/162"
+    }
+   },
+   "PBdnyzsJ7dE_331": {
+    "closest": "indic",
+    "wrong": {
+     "indic": "2/196",
+     "vaani": "5/193"
+    },
+    "note": "both almost same"
+   },
+   "kTaKgtRALZo_424": {
+    "closest": "vaani",
+    "wrong": {
+     "vaani": "11/169",
+     "indic": "1/136"
+    },
+    "note": "indic misses sentences"
+   },
+   "v4jUcYwPL0g_692": {
+    "closest": "vaani",
+    "wrong": {
+     "vaani": "12/173",
+     "indic": "12/135"
+    },
+    "note": "indic misses sentences"
+   }
+  },
+  "decision": "Keep vaani default (complete); indic = opt-in fast mode. Dropped speech is unrecoverable, misspellings are fixed downstream."
+ },
+ "round3": {
+  "judged": "2026-10-18, blind, vaani (whisper.cpp, beam 3, 30 s window) vs mlx10 (MLX batched greedy, 10 s encoder window), Telugu only",
+  "clips": {
+   "82SqXcKaadU_790": {
+    "closest": "tie",
+    "wrong": {
+     "vaani": "4/156",
+     "mlx10": "4/155"
+    },
+    "note": "Both are almost same not much difference"
+   },
+   "PBdnyzsJ7dE_331": {
+    "closest": "vaani (slightly)",
+    "wrong": {
+     "mlx10": "7/194",
+     "vaani": "4/193"
+    },
+    "note": "vaani is bit better but not much difference between both"
+   },
+   "kTaKgtRALZo_424": {
+    "closest": "vaani (slightly)",
+    "wrong": {
+     "vaani": "11/169",
+     "mlx10": "14/166"
+    },
+    "note": "Both are similar, vaani is bit better"
+   },
+   "v4jUcYwPL0g_692": {
+    "closest": "vaani (slightly)",
+    "wrong": {
+     "vaani": "9/173",
+     "mlx10": "10/178"
+    },
+    "note": "almost same here also but vaani is bit better"
+   }
+  },
+  "summary": "wrong words vaani 28/691 (4.1%) vs mlx10 35/693 (5.1%); mlx10 is 4.7x faster on Telugu"
+ }
+}
