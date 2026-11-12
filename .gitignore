@@ -6,3 +6,5 @@ models/
 data/
 kb/
 bakeoff/
+
+.lavish/

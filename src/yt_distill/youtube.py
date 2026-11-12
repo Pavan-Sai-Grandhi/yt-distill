@@ -8,7 +8,9 @@ import yt_dlp
 
 from .paths import video_dir
 
-_BASE = {"quiet": True, "no_warnings": True, "noprogress": True}
+# YouTube needs a JS runtime to solve its player challenge, or audio downloads 403.
+# yt-dlp enables only deno by default; also allow node/bun, whichever is installed.
+_BASE = {"quiet": True, "no_warnings": True, "noprogress": True, "js_runtimes": {"deno": {}, "node": {}, "bun": {}}}
 
 
 @dataclass
